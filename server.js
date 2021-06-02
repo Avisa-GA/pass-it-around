@@ -8,7 +8,7 @@ const path = require('path')
 const port = 3000;
 
 
-
+// Define a router
 app.get('/:number_of_bottles', (req, res) => {
 
 
@@ -24,7 +24,6 @@ app.get('/:number_of_bottles', (req, res) => {
     </html>
 `)
     } 
-   
 
 
 })
@@ -44,15 +43,13 @@ app.get('/:number_of_bottles/98/', (req, res) => {
     `)
 
     } 
-    
-  
 
 
 })
 
 
 
-// routers run code as reponse to a request
+// listen tp port
 app.listen(port, () => {
     console.log('Express is listening on port', port)
 })
