@@ -18,8 +18,6 @@ app.get('/:number_of_bottles', (req, res) => {
         <body>
             <h2>${req.params.number_of_bottles} Bottles of beer on the wall</h2>
             <a style=${req.params.number_of_bottles>0 ? 'display:block' : 'display:none'} href=${`http://localhost:3000/${req.params.number_of_bottles - 1}/98`}>take one down, pass it around</a>
-            <br>
-            <a style=${req.params.number_of_bottles>0 ? 'display:none' : 'display:block'} href=${`http://localhost:3000/${req.params.number_of_bottles=99}`}>start over</a>
         </body>
     </html>
 `)
@@ -35,7 +33,7 @@ app.get('/:number_of_bottles/98/', (req, res) => {
     <html>
     <body>
         <h2>${req.params.number_of_bottles} Bottles of beer on the wall</h2>
-        <a style=${req.params.number_of_bottles>0 ? 'display:block' : 'display:none'} href=${`http://localhost:3000/${req.params.number_of_bottles - 1}`}>take one down, pass it around</a>
+        <a style=${req.params.number_of_bottles>0 ? 'display:block' : 'display:none'} href=${`http://localhost:3000/${req.params.number_of_bottles - 1}/98`}>take one down, pass it around</a>
         <br>
         <a style=${req.params.number_of_bottles>0 ? 'display:none' : 'display:block'} href=${`http://localhost:3000/${req.params.number_of_bottles=99}`}>start over</a>
     </body>
